@@ -9,7 +9,6 @@ set encoding=utf-8
 
 set autowrite
 set autoread
-set autochdir
 set hidden
 
 " Backup
@@ -275,7 +274,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'gcmt/wildfire.vim'
 
 Plugin 'fatih/vim-go'
-set re=1
+" set re=1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -286,7 +285,6 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>gd <Plug>(go-doc-browser)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap gd :GoDef<CR>
 au FileType go nmap gb :GoDefPop<CR>
@@ -301,6 +299,9 @@ let g:gist_post_private = 1
 
 Plugin 'vim-php/tagbar-phpctags.vim'
 let g:tagbar_phpctags_bin='/usr/local/Cellar/phpctags/0.6.0/bin/phpctags'
+
+Plugin 'rizzatti/dash.vim'
+nmap <silent> <leader>d <Plug>DashSearch
 
 " color
 Plugin 'tomasr/molokai'
